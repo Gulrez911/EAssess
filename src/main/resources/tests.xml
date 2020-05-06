@@ -1,0 +1,100 @@
+<workbook>
+	<worksheet name="test_upload">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="result1" var="test"
+			varType="com.assessment.data.Test">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">test.testName</mapping>
+				<mapping row="1" col="1">test.qualifier1</mapping>
+				<mapping row="1" col="2">test.qualifier2</mapping>
+				<mapping row="1" col="3">test.qualifier3</mapping>
+				<mapping row="1" col="4">test.qualifier4</mapping>
+				<mapping row="1" col="5">test.qualifier5</mapping>
+				<mapping row="1" col="6">test.testTimeInMinutes</mapping>
+				<!-- <mapping row="1" col="7">test.totalMarks</mapping> -->
+				<mapping row="1" col="7">test.intro</mapping>
+				<mapping row="1" col="8">test.postTestCompletionText</mapping>
+				<mapping row="1" col="9">test.showFinalScoreToParticipants</mapping>
+				<!-- <mapping row="1" col="11">test.questionOrder</mapping> -->
+				<mapping row="1" col="10">test.passPercent</mapping>
+				<mapping row="1" col="11">test.sentToStudent</mapping>
+				<!-- <mapping row="1" col="14">test.sendToAdminEmail</mapping> -->
+				<mapping row="1" col="12">test.randomQuestions</mapping>
+				<mapping row="1" col="13">test.sendRecommReport</mapping>
+				<mapping row="1" col="14">test.considerConfidence</mapping>
+				<mapping row="1" col="15">test.fullStackTest</mapping>
+				<mapping row="1" col="16">test.justification</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0">End Rows:</cellcheck>
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+		
+	<worksheet name="section_upload1">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="result2" var="sect"
+			varType="com.assessment.data.Section">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">sect.sectionName</mapping>
+				<mapping row="1" col="1">sect.sectionTimeInMinutes</mapping>
+				<mapping row="1" col="2">sect.percentQuestionsAsked</mapping>
+				<mapping row="1" col="3">sect.noOfQuestions</mapping>
+				<mapping row="1" col="4">sect.testName</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0">End Rows:</cellcheck>
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+	<worksheet name="questions_upload">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="result3" var="ques"
+			varType="com.assessment.data.Question">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">ques.questionText</mapping>
+				<mapping row="1" col="1">ques.choice1</mapping>
+				<mapping row="1" col="2">ques.choice2</mapping>
+				<mapping row="1" col="3">ques.choice3</mapping>
+
+				<mapping row="1" col="4">ques.choice4</mapping>
+				<mapping row="1" col="5">ques.choice5</mapping>
+				<mapping row="1" col="6">ques.choice6</mapping>
+				<mapping row="1" col="7">ques.rightChoices</mapping>
+				<mapping row="1" col="8">ques.qualifier1</mapping>
+				<mapping row="1" col="9">ques.qualifier2</mapping>
+				<mapping row="1" col="10">ques.qualifier3</mapping>
+				<mapping row="1" col="11">ques.qualifier4</mapping>
+				<mapping row="1" col="12">ques.qualifier5</mapping>
+				<mapping row="1" col="13">ques.diff</mapping>
+				<mapping row="1" col="14">ques.instructionsIfAny</mapping>
+				
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0">End Rows:</cellcheck>
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+	 <worksheet name="qmapper_upload">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="result4" var="sect"
+			varType="com.assessment.web.dto.QuestionMapperDto">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">sect.sectionName</mapping>
+				<mapping row="1" col="1">sect.testName</mapping>
+				<mapping row="1" col="2">sect.questionId</mapping>
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0">End Rows:</cellcheck>
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+</workbook>

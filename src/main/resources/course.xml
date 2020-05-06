@@ -1,0 +1,26 @@
+<workbook>
+	<worksheet name="LearningPath">
+		<section startRow="0" endRow="0" />
+		<loop startRow="1" endRow="1" items="result" var="ques"
+			varType="com.test.excel.CourseDto">
+			<section startRow="1" endRow="1">
+				<mapping row="1" col="0">ques.learningPathName</mapping>
+				<mapping row="1" col="1">ques.learningPathImageUrl</mapping>
+				<mapping row="1" col="2">ques.technology</mapping>
+				<mapping row="1" col="3">ques.courseName</mapping>
+				<mapping row="1" col="4">ques.duration</mapping>
+				<mapping row="1" col="5">ques.imageUrl</mapping>
+				<mapping row="1" col="6">ques.subTechnology</mapping>
+				<mapping row="1" col="7">ques.moduleName</mapping>
+				<mapping row="1" col="8">ques.contentLink</mapping>
+				<mapping row="1" col="9">ques.testId</mapping>
+<!-- 				<mapping row="1" col="10">ques.testName</mapping> -->
+			</section>
+			<loopbreakcondition>
+				<rowcheck offset="0">
+					<cellcheck offset="0">End Rows:</cellcheck>
+				</rowcheck>
+			</loopbreakcondition>
+		</loop>
+	</worksheet>
+</workbook>
